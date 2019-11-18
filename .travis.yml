@@ -1,6 +1,6 @@
 language: java
 install: true
-"jdk: oraclejdk11"
+jdk: oraclejdk11
 script:
 - mvn install
 after_success:
