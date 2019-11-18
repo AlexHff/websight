@@ -1,4 +1,4 @@
-# Websight
+# Websight [![Build Status](https://travis-ci.com/AlexHff/websight.svg?token=qewhLzzy4xorKFhMwTS6&branch=master)](https://travis-ci.com/AlexHff/websight)
 
 A (fake) website statistics analyzer.
 Implementation of developer-side testing on the JVM using JUnit4.
