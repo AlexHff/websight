@@ -17,3 +17,5 @@ To run tests
 ```
 mvn test
 ```
+## Testing
+This build passed Travis CI.
