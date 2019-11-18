@@ -8,6 +8,9 @@ public final class App {
     private static final String INSTAGRAM = "www.instagram.com";
     private static final String TWITTER = "www.twitter.com";
 
+    /**
+     *
+     */
     private App() {
 
     }
