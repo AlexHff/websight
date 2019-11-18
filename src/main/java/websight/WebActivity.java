@@ -9,6 +9,11 @@ public class WebActivity implements Statistics {
     private static final int LEN = 4;
     private static final String PREFIX = "www.";
     private Map<String, Integer> map;
+    private Comparator<Map.Entry<String, Integer>> sortByValue = new Comparator<Map.Entry<String, Integer>>() {
+        public int compare(Map.Entry<String, Integer> e1, Map.Entry<String, Integer> e2) {
+            return -e1.getValue().compareTo(e2.getValue());
+        }
+    };
 
     /**
      * @return
@@ -16,12 +21,6 @@ public class WebActivity implements Statistics {
     public WebActivity() {
         map = new HashMap<String, Integer>();
     }
-
-    private Comparator<Map.Entry<String, Integer>> sortByValue = new Comparator<Map.Entry<String, Integer>>() {
-        public int compare(Map.Entry<String, Integer> e1, Map.Entry<String, Integer> e2) {
-            return -e1.getValue().compareTo(e2.getValue());
-        }
-    };
 
     /**
      * @param pageName
