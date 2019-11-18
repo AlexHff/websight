@@ -57,12 +57,12 @@ public class AppTest {
 
     @Test
     public void testGetVisit() {
-        int res = 3;
+        final int RES = 3;
         WebActivity e = new WebActivity();
         e.visit(GOOGLE);
         e.visit(GOOGLE);
         e.visit(GOOGLE);
-        assertEquals(res, e.getVisit(GOOGLE));
+        assertEquals(RES, e.getVisit(GOOGLE));
     }
 
     @Test

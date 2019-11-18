@@ -2,10 +2,13 @@ package websight;
 
 import java.util.*;
 
+/**
+ *
+ */
 public class WebActivity implements Statistics {
-    private Map<String, Integer> map;
     private static final int LEN = 4;
     private static final String PREFIX = "www.";
+    private Map<String, Integer> map;
 
     /**
      * @return
