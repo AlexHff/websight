@@ -4,7 +4,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ *
+ */
 public class AppTest {
+    private static final String GOOGLE = "www.google.com";
+    private static final String INSTAGRAM = "www.instagram.com";
+    private static final String TWITTER = "www.twitter.com";
+
     @Test
     public void testWebActivityNotNull() {
         assertNotNull(new WebActivity());
@@ -31,15 +38,15 @@ public class AppTest {
     @Test
     public void testMostVisited() {
         WebActivity e = new WebActivity();
-        e.visit("www.google.com");
-        e.visit("www.google.com");
-        e.visit("www.twitter.com");
-        e.visit("www.instagram.com");
-        e.visit("www.instagram.com");
-        e.visit("www.instagram.com");
-        e.visit("www.google.com");
-        e.visit("www.google.com");
-        assertEquals("www.google.com", e.mostVisited().get(0));
+        e.visit(GOOGLE);
+        e.visit(GOOGLE);
+        e.visit(TWITTER);
+        e.visit(INSTAGRAM);
+        e.visit(INSTAGRAM);
+        e.visit(INSTAGRAM);
+        e.visit(GOOGLE);
+        e.visit(GOOGLE);
+        assertEquals(GOOGLE, e.mostVisited().get(0));
     }
 
     @Test
@@ -50,16 +57,17 @@ public class AppTest {
 
     @Test
     public void testGetVisit() {
+        int res = 3;
         WebActivity e = new WebActivity();
-        e.visit("www.google.com");
-        e.visit("www.google.com");
-        e.visit("www.google.com");
-        assertEquals(3, e.getVisit("www.google.com"));
+        e.visit(GOOGLE);
+        e.visit(GOOGLE);
+        e.visit(GOOGLE);
+        assertEquals(res, e.getVisit(GOOGLE));
     }
 
     @Test
     public void testGetVisitDoesNotExist() {
         WebActivity e = new WebActivity();
-        assertEquals(-1, e.getVisit("www.google.com"));
+        assertEquals(-1, e.getVisit(GOOGLE));
     }
 }

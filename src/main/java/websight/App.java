@@ -1,6 +1,10 @@
 package websight;
 
 public final class App {
+
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         WebActivity e = new WebActivity();
         e.visit("www.google.com");
