@@ -13,9 +13,8 @@ cd websight
 mvn clean compile exec:java
 ```
 
+## Testing
 To run tests
 ```
 mvn test
 ```
-## Testing
-This build passed Travis CI.
